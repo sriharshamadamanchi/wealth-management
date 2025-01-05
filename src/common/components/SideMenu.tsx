@@ -10,6 +10,7 @@ import MenuContent from "./MenuContent";
 import OptionsMenu from "./OptionsMenu";
 import { Label } from "./Label";
 import { useSelector } from "react-redux";
+import { theme } from "../theme";
 
 const drawerWidth = 240;
 
@@ -64,8 +65,8 @@ export default function SideMenu() {
         <Avatar
           sizes = "small"
           alt = {name}
-          sx = {{ width: 36, height: 36 }}
-        />
+          sx = {{ width: 36, height: 36, bgcolor: theme.colors.light.primary }}
+        >{name.charAt(0).toUpperCase()}</Avatar>
         <Box sx = {{ mr: "auto" }}>
           <Label m black title = {name} />
           <Label s black title = {email} />
