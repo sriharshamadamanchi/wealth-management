@@ -6,7 +6,7 @@ import { PersistGate } from "redux-persist/integration/react"
 import { ErrorBoundary } from "./common/ErrorBoundary/ErrorBoundary"
 import { themeProvider } from "./common/theme"
 import { persistor, store } from "./common/store"
-import Dashboard from "./home"
+import Home from "./home"
 
 const App = () => {
 
@@ -15,7 +15,7 @@ const App = () => {
       <PersistGate loading = {null} persistor = {persistor}>
         <ErrorBoundary>
           <ThemeProvider theme = {themeProvider}>
-            <Dashboard />
+            <Home />
           </ThemeProvider>
         </ErrorBoundary>
       </PersistGate>
